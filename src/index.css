@@ -1,0 +1,6 @@
+/* 1920x1080 */
+@media only screen and (max-width: 1080px) {
+  .bodyclassname {
+    margin-left: 14%;
+  }
+}
