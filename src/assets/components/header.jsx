@@ -12,6 +12,9 @@ function Header() {
     const goToTazas = () => {
         newpath("/Tazas");
     }
+    const goToTazones = () => {
+        newpath("/Tazones");
+    }
 
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -47,7 +50,7 @@ function Header() {
                         <a onClick={goToTazas} className="nav-link" href='' >
                             Tazas🍵
                         </a>
-                        <a className="nav-link" >
+                        <a onClick={goToTazones} className="nav-link" href='' >
                             Tazones🍵
                         </a>
                         <a className="nav-link" >
