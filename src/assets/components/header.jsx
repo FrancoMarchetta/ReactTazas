@@ -1,10 +1,25 @@
+import { useNavigate } from 'react-router-dom';
+
 function Header() {
+
+    const newpath = useNavigate();
+    const goToNosotros = () => {
+        newpath("/Nosotros");
+    }
+    const goToHome = () => {
+        newpath("/");
+    }
+    const goToTazas = () => {
+        newpath("/Tazas");
+    }
+
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">
+                <a onClick={goToHome} className="navbar-brand" href="#">
                     <img
-                        style={{ width: "2cm" }}
+                        onClick={goToHome}
+                        style={{ width: "2cm", marginRight: "1cm", marginLeft: "2cm" }} //
                         src="../public/images/truelogo.jpg"
                     ></img>
                     |Cuphead|
@@ -22,25 +37,26 @@ function Header() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <a className="nav-link active" aria-current="page" href="#">
+                        <a onClick={goToHome} className="nav-link active" aria-current="page" href="#">
                             Home🏠
                         </a>
-                        <a className="nav-link" href="">
-                            nosotros🫂
+                        <a onClick={goToNosotros} className="nav-link" href='' >
+                            Nosotros🫂
                         </a>
-                        <a className="nav-link" href="#">
-                            tazas🍵
+
+                        <a onClick={goToTazas} className="nav-link" href='' >
+                            Tazas🍵
                         </a>
-                        <a className="nav-link" href="#">
-                            tazones🍵
+                        <a className="nav-link" >
+                            Tazones🍵
                         </a>
-                        <a className="nav-link" href="">
-                            carrito🛒
+                        <a className="nav-link" >
+                            Carrito🛒
                         </a>
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav >
     );
 }
 

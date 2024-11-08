@@ -1,4 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 function Home() {
+
     return (
         <main className="container bodyclassname">
             <br />
