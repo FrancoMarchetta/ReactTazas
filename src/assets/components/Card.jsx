@@ -16,7 +16,7 @@ function Card({ image, name, description }) {
                 <div className="card-body">
                     <h5 className="card-title"> {name} </h5>
                     <p className="card-text"> {description} </p>
-                    <a href="#" className="btn btn-danger">Go somewhere</a>
+                    <a href="#" className="btn btn-danger">Agregar al Carrito</a>
                 </div>
             </div>
         </>

@@ -65,7 +65,7 @@ function Footer() {
                     {/* <!-- Medios de Pago --> */}
                     <div className="col-12 col-sm-6 col-md-3">
                         <h5 className="nav__title">Medios de Pago</h5>
-                        <div className="d-flex flex-wrap">
+                        <div id="imagenesPago" className="d-flex flex-wrap">
                             <img
                                 id="visa"
                                 className="d-block w-100 img__logo"
@@ -84,7 +84,7 @@ function Footer() {
                     {/* <!-- Medios de Envío --> */}
                     <div className="col-12 col-sm-6 col-md-3">
                         <h5 className="nav__title">Medios de Envío</h5>
-                        <div className="d-flex flex-wrap ">
+                        <div id="imagenesEnvio" className="d-flex flex-wrap">
                             <img
                                 src="../public/images/andreani.png"
                                 alt=""
