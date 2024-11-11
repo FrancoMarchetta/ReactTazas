@@ -1,20 +1,32 @@
 function Carrito({ carrito }) {
+
+    function limpiarCarrito() {
+        localStorage.clear();
+        window.location.reload()
+    }
+
     return (
         <>
             <br />
             <br />
             <br />
             <br />
+            <br />
 
             <section className="carritoSection">
-                <h1>Carrito de Compras</h1>
+                <div style={{ marginLeft: "30%", display: "flex" }}>
+                    <h1>Carrito de Compras</h1>
+                    <button id="botonVaciarCarrito" onClick={limpiarCarrito} >Vaciar Carrito</button>
+                </div>
+
+
                 {carrito.length === 0 ? (
                     <p>No hay productos en el carrito.</p>
                 ) : (
                     <ul>
                         {carrito.map((producto, index) => (
                             <li key={index}>
-                                {producto.name} (ID: {producto.productId})
+                                <img style={{ maxHeight: "2cm" }} src={producto.image} alt="" /> {producto.name} (ID: {producto.productId})
                             </li>
                         ))}
                     </ul>

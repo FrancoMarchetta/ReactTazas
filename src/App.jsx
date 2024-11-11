@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useEffect } from 'react';
 // import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './assets/components/header'
@@ -15,9 +16,21 @@ import Carrito from './pages/Carrito';
 function App() {
   const [carrito, setCarrito] = useState([]);
 
-  const agregarAlCarrito = (productId, name) => {
-    setCarrito((prevCarrito) => [...prevCarrito, { productId, name }]);
+  const agregarAlCarrito = (productId, name, image) => {
+    const carritoExistente = JSON.parse(localStorage.getItem('carrito')) || [];
+    const nuevoCarrito = [...carritoExistente, { productId, name, image }];
+    localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
+    setCarrito(nuevoCarrito);
   };
+
+  useEffect(() => {
+    // Cargar el carrito desde localStorage al iniciar la aplicación
+    const carritoGuardado = JSON.parse(localStorage.getItem('carrito')) || [];
+    setCarrito(carritoGuardado);
+  }, []);
+
+
+
 
 
   return (

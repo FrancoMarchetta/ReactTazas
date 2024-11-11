@@ -1,7 +1,8 @@
 function Card({ image, name, description, productId, agregarAlCarrito }) {
     const handleAgregarCarrito = () => {
-        agregarAlCarrito(productId, name);
+        agregarAlCarrito(productId, name, image);
     };
+
 
     return (
         <div className="card" style={{ width: "18rem" }}>
