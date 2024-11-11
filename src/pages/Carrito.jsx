@@ -15,8 +15,8 @@ function Carrito({ carrito }) {
 
             <section className="carritoSection">
                 <div style={{ marginLeft: "30%", display: "flex" }}>
-                    <h1>Carrito de Compras</h1>
-                    <button id="botonVaciarCarrito" onClick={limpiarCarrito} >Vaciar Carrito</button>
+                    <h1>🛒Carrito de Compras</h1>
+                    <button id="botonVaciarCarrito" onClick={limpiarCarrito} >Vaciar Carrito🗑️</button>
                 </div>
 
 
@@ -26,7 +26,7 @@ function Carrito({ carrito }) {
                     <ul>
                         {carrito.map((producto, index) => (
                             <li key={index}>
-                                <img style={{ maxHeight: "2cm" }} src={producto.image} alt="" /> {producto.name} (ID: {producto.productId})
+                                <img style={{ maxHeight: "2cm", borderRadius: "40px" }} src={producto.image} alt="" /> {producto.name} (ID: {producto.productId})
                             </li>
                         ))}
                     </ul>

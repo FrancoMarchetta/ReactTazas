@@ -1,6 +1,7 @@
 function Card({ image, name, description, productId, agregarAlCarrito }) {
     const handleAgregarCarrito = () => {
         agregarAlCarrito(productId, name, image);
+        alert("se agrego al carrito"); //<--- opcional
     };
 
 

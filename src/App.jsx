@@ -24,7 +24,6 @@ function App() {
   };
 
   useEffect(() => {
-    // Cargar el carrito desde localStorage al iniciar la aplicación
     const carritoGuardado = JSON.parse(localStorage.getItem('carrito')) || [];
     setCarrito(carritoGuardado);
   }, []);
