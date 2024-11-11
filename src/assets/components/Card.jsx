@@ -1,6 +1,9 @@
-function Card({ image, name, description }) {
+import Carrito from "../../pages/Carrito";
 
-
+function Card({ image, name, description, productId }) {
+    function HandleAgregarCarrito() {
+        AgregarCarrito(productId, name);
+    }
 
     return (
         <>
@@ -16,10 +19,23 @@ function Card({ image, name, description }) {
                 <div className="card-body">
                     <h5 className="card-title"> {name} </h5>
                     <p className="card-text"> {description} </p>
-                    <a href="#" className="btn btn-danger">Agregar al Carrito</a>
+                    <button onClick={HandleAgregarCarrito} className="btn btn-danger">Agregar al Carrito</button>
+                    <h6>ID = {productId}</h6>
                 </div>
             </div>
         </>
     )
 }
+
+
 export default Card;
+
+
+
+let carrito = [];
+
+export function AgregarCarrito(productId, name) {
+    carrito.push(productId + " " + name)
+    console.log(carrito);
+    return carrito;
+}

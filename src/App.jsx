@@ -8,6 +8,9 @@ import Nosotros from './pages/nosotros'
 import Card from './assets/components/Card';
 import CatalogoTazas from './pages/CatalogoTazas';
 import CatalogoTazones from './pages/CatalogoTazones';
+import Carrito from './pages/Carrito';
+
+
 
 function App() {
 
@@ -22,6 +25,8 @@ function App() {
           <Route path="/Nosotros" element={<Nosotros></Nosotros>}></Route>
           <Route path="/Tazas" element={<CatalogoTazas></CatalogoTazas>}></Route>
           <Route path="/Tazones" element={<CatalogoTazones></CatalogoTazones>}></Route>
+          <Route path="/Carrito" element={<Carrito></Carrito>}></Route>
+
 
 
         </Routes >

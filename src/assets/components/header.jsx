@@ -3,17 +3,25 @@ import { useNavigate } from 'react-router-dom';
 function Header() {
 
     const newpath = useNavigate();
+
     const goToNosotros = () => {
         newpath("/Nosotros");
     }
+
     const goToHome = () => {
         newpath("/");
     }
+
     const goToTazas = () => {
         newpath("/Tazas");
     }
+
     const goToTazones = () => {
         newpath("/Tazones");
+    }
+
+    const goToCarrito = () => {
+        newpath("/Carrito");
     }
 
     return (
@@ -53,7 +61,7 @@ function Header() {
                         <a onClick={goToTazones} className="nav-link" href='' >
                             Tazones🍵
                         </a>
-                        <a className="nav-link" >
+                        <a onClick={goToCarrito} className="nav-link" href='' >
                             Carrito🛒
                         </a>
                     </div>
