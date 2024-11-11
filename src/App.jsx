@@ -13,6 +13,12 @@ import Carrito from './pages/Carrito';
 
 
 function App() {
+  const [carrito, setCarrito] = useState([]);
+
+  const agregarAlCarrito = (productId, name) => {
+    setCarrito((prevCarrito) => [...prevCarrito, { productId, name }]);
+  };
+
 
   return (
     <>
@@ -23,9 +29,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/Nosotros" element={<Nosotros></Nosotros>}></Route>
-          <Route path="/Tazas" element={<CatalogoTazas></CatalogoTazas>}></Route>
-          <Route path="/Tazones" element={<CatalogoTazones></CatalogoTazones>}></Route>
-          <Route path="/Carrito" element={<Carrito></Carrito>}></Route>
+          <Route path="/Tazas" element={<CatalogoTazas agregarAlCarrito={agregarAlCarrito}></CatalogoTazas>}></Route>
+          <Route path="/Tazones" element={<CatalogoTazones agregarAlCarrito={agregarAlCarrito}></CatalogoTazones>}></Route>
+          <Route path="/Carrito" element={<Carrito carrito={carrito}></Carrito>}></Route>
 
 
 
