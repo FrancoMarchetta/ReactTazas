@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer className="footer mt-auto h-auto py-3 ">
+        <footer className="footer mt-auto h-auto py-3  ">
             <div className="container">
                 <div className="row">
                     {/* <!-- Redes --> */}

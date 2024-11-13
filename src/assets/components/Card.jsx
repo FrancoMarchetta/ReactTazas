@@ -1,7 +1,11 @@
-function Card({ image, name, description, productId, agregarAlCarrito }) {
+import { useState } from "react";
+function Card({ image, name, description, productId, agregarAlCarrito, price }) {
+
+
+
     const handleAgregarCarrito = () => {
-        agregarAlCarrito(productId, name, image);
-        alert("se agrego al carrito"); //<--- opcional
+        agregarAlCarrito(productId, name, image, price);
+        // alert("se agrego al carrito"); //<--- opcional
     };
 
 
@@ -11,8 +15,10 @@ function Card({ image, name, description, productId, agregarAlCarrito }) {
             <div className="card-body">
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text">{description}</p>
+                <p className="card-text">{"$" + price}</p>
+
                 <button onClick={handleAgregarCarrito} className="btn btn-danger">Agregar al Carrito</button>
-                <h6>ID = {productId}</h6>
+                {/* <h6>ID = {productId}</h6> */}
             </div>
         </div>
     );

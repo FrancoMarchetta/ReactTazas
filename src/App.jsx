@@ -16,9 +16,9 @@ import Carrito from './pages/Carrito';
 function App() {
   const [carrito, setCarrito] = useState([]);
 
-  const agregarAlCarrito = (productId, name, image) => {
+  const agregarAlCarrito = (productId, name, image, price) => {
     const carritoExistente = JSON.parse(localStorage.getItem('carrito')) || [];
-    const nuevoCarrito = [...carritoExistente, { productId, name, image }];
+    const nuevoCarrito = [...carritoExistente, { productId, name, image, price }];
     localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
     setCarrito(nuevoCarrito);
   };

@@ -1,9 +1,15 @@
+import { useState } from "react";
 function Carrito({ carrito }) {
 
     function limpiarCarrito() {
         localStorage.clear();
         window.location.reload()
     }
+
+    const total = carrito.reduce((precioAcumulado, producto) => precioAcumulado + producto.price, 0);
+
+
+
 
     return (
         <>
@@ -12,6 +18,8 @@ function Carrito({ carrito }) {
             <br />
             <br />
             <br />
+
+
 
             <section className="carritoSection">
                 <div style={{ marginLeft: "30%", display: "flex" }}>
@@ -26,12 +34,17 @@ function Carrito({ carrito }) {
                     <ul>
                         {carrito.map((producto, index) => (
                             <li key={index}>
-                                <img style={{ maxHeight: "2cm", borderRadius: "40px" }} src={producto.image} alt="" /> {producto.name} (ID: {producto.productId})
+                                <img style={{ maxHeight: "2cm", borderRadius: "40px" }} src={producto.image} alt="" /> {producto.name} {/*(ID: {producto.productId} )*/}  ||{"$" + producto.price}||
                             </li>
                         ))}
                     </ul>
                 )}
+                <div style={{ float: "right", marginTop: "30%" }}>
+                    <h1 >total:{total}</h1>
+
+                </div>
             </section>
+
         </>
     );
 }
