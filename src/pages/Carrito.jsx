@@ -39,11 +39,13 @@ function Carrito({ carrito }) {
                         ))}
                     </ul>
                 )}
-                <div style={{ float: "right", marginTop: "30%" }}>
-                    <h1 >total:{total}</h1>
 
-                </div>
-            </section>
+
+                <h1 style={{ marginLeft: "85%" }} >total: ${total}</h1>
+                <button style={{ marginLeft: "88%", width: "7%" }} type="button" class="btn btn-danger">Ir a pagar</button>
+
+
+            </section >
 
         </>
     );

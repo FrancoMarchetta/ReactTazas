@@ -62,3 +62,23 @@ function CatalogoTazones({ agregarAlCarrito }) {
 }
 
 export default CatalogoTazones;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

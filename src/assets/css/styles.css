@@ -85,10 +85,9 @@ html, body, #root {
 
 /* Este mantiene el footer abajo cuando hay poco contenido */
 .footer {
-  margin-top: auto;
-  width: 100%;
+  /* margin-top: auto; */
+  border-radius: 10px;
   background-color: #d86440;
-  padding: 1rem;
   text-align: center;
 }
 
@@ -113,14 +112,16 @@ html, body, #root {
 
 .carritoSection{
   border: solid black;
-  border-width: 1px;
-  height: 100%;
+  border-width: 2px;
+  border-radius: 20px;
   width: 80%;
-  margin-left: 10%;
+  margin-left: 10%;     /*<-- no se exactamente que hice pero algo de lo que esta aca hace que no se rompa mas el carrito asi que porfavor no tocar*/
+  /* min-height: 100%; */
+
 }
 
 #botonVaciarCarrito{
-   border-radius: 50px;
+   border-radius: 10px;
    margin: 10px;
    transition: 0.5s;
   }
@@ -128,5 +129,6 @@ html, body, #root {
   #botonVaciarCarrito:hover{
   background-color: red;
 }
+
 
 
