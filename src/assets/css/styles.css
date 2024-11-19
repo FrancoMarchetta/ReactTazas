@@ -130,5 +130,11 @@ html, body, #root {
   background-color: red;
 }
 
+#botonPagar{
+   /* margin-left: 88%;  */
+   border-radius: 20px;
+    width: 100%;
+
+}
 
 

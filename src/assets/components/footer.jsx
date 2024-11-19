@@ -66,19 +66,19 @@ function Footer() {
                     <div className="col-12 col-sm-6 col-md-3">
                         <h5 className="nav__title">Medios de Pago</h5>
                         <div id="imagenesPago" className="d-flex flex-wrap">
-                            <img
+                            {/* <img
                                 id="visa"
                                 className="d-block w-100 img__logo"
                                 src="../public/images/logo-visa.png"
-                            />
+                            /> */}
                             <img
                                 className="d-block h-100 img__logo"
                                 src="../public/images/mercado pago.png"
                             />
-                            <img
+                            {/* <img
                                 className="d-block h-100 img__logo"
                                 src="../public/images/paypal-logo.png"
-                            />
+                            /> */}
                         </div>
                     </div>
                     {/* <!-- Medios de Envío --> */}
