@@ -1,10 +1,25 @@
 import { useState } from "react";
-import { initMercadoPago, Wallet } from '@mercadopago/sdk-react';
+import { useEffect } from "react";
 import axios from "axios";
+import { Preference } from "mercadopago";
+import { initMercadoPago } from '@mercadopago/sdk-react';
+import { Link } from "react-router-dom";
 
+
+//---------------------------------------------------------
+
+
+
+
+
+//---------------------------------------------------------
 function Carrito({ carrito }) {
-    initMercadoPago('APP_USR-5a2cf492-55c2-4abc-8adc-d23f744e516f', { locale: "es-AR" });
-    const [preferenceId, setPreferenceId] = useState(null);
+
+
+
+
+
+
 
     function limpiarCarrito() {
         localStorage.clear();
@@ -13,30 +28,10 @@ function Carrito({ carrito }) {
 
     const total = carrito.reduce((precioAcumulado, producto) => precioAcumulado + producto.price, 0);
 
-    // Mercado Pago 😔
-    const createPreference = async () => {
-        try {
-            const response = await axios.post("http://localhost:3000/create_preference", {
-                items: carrito.map(producto => ({
-                    title: producto.name,
-                    quantity: 1,
-                    unit_price: producto.price,  // Aquí cambiaste price a unit_price
-                })),
-            });
-            const { id } = response.data;
-            return id;
-        } catch (error) {
-            console.error(error);
-        }
-    };
 
 
-    const handleBuy = async () => {
-        const id = await createPreference();
-        if (id) {
-            setPreferenceId(id);
-        }
-    };
+
+
 
     return (
         <>
@@ -65,16 +60,17 @@ function Carrito({ carrito }) {
                 )}
 
                 <h1 style={{ marginLeft: "80%" }}>total: ${total}</h1>
-                <button onClick={handleBuy} id="botonPagar" type="button" className="btn btn-danger">
+                <button
+                    id="botonPagar"
+                    type="button"
+                    className="btn btn-danger"
+                    onClick={() => window.open('https://link.mercadopago.com.ar/trlab3', '_blank')}
+                >
                     Ir a pagar
                 </button>
 
-                {preferenceId && (
-                    <Wallet
-                        initialization={{ preferenceId: preferenceId }}
-                        customization={{ texts: { valueProp: 'smart_option' } }}
-                    />
-                )}
+
+
             </section>
         </>
     );
