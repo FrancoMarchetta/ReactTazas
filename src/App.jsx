@@ -34,7 +34,7 @@ function App() {
 
   return (
     <>
-
+      {/* rutas para las pestañas */}
       <Router>
         <Header></Header>
 

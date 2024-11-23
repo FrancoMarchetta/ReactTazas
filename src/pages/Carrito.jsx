@@ -16,20 +16,12 @@ import { Link } from "react-router-dom";
 function Carrito({ carrito }) {
 
 
-
-
-
-
-
     function limpiarCarrito() {
         localStorage.clear();
         window.location.reload();
     }
 
     const total = carrito.reduce((precioAcumulado, producto) => precioAcumulado + producto.price, 0);
-
-
-
 
 
 

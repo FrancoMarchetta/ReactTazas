@@ -12,7 +12,7 @@ function Header() {
         newpath("/");
     }
 
-    const goToTazas = () => {
+    const goToTazas = () => {                        // <-- todas las funciones para las rutas
         newpath("/Tazas");
     }
 

@@ -5,7 +5,7 @@ function Card({ image, name, description, productId, agregarAlCarrito, price }) 
 
     const handleAgregarCarrito = () => {
         agregarAlCarrito(productId, name, image, price);
-        // alert("se agrego al carrito"); //<--- opcional
+        alert("se agrego al carrito"); //<--- opcional
     };
 
 
@@ -18,7 +18,7 @@ function Card({ image, name, description, productId, agregarAlCarrito, price }) 
                 <p className="card-text">{"$" + price}</p>
 
                 <button onClick={handleAgregarCarrito} className="btn btn-danger">Agregar al Carrito</button>
-                {/* <h6>ID = {productId}</h6> */}
+                {/* <h6>ID = {productId}</h6> */}   {/*<-- muestra el id de los productos. Lo use para pruebas */}
             </div>
         </div>
     );
