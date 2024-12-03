@@ -137,4 +137,45 @@ html, body, #root {
 
 }
 
+.card {
+  width: 18rem;
+  height: 25rem; /* Altura fija para mantener uniformidad */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.card-img-top {
+  max-height: 18rem; 
+  object-fit: cover; 
+  margin-bottom: 0.25rem; 
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0.5rem;
+}
+
+.card-title {
+  font-size: 1rem; 
+  margin-bottom: 1.50rem;
+}
+
+.card-text {
+  font-size: rem; 
+  margin-bottom: 0.95rem; 
+}
+
+button {
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d63333;
+}

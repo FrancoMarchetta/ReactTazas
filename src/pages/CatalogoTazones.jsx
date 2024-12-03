@@ -56,7 +56,7 @@ function CatalogoTazones({ agregarAlCarrito }) {
             <br />
             <br />
             <br />
-            price={1}
+            
         </>
     )
 }
