@@ -5,14 +5,6 @@ import { Preference } from "mercadopago";
 import { initMercadoPago } from '@mercadopago/sdk-react';
 import { Link } from "react-router-dom";
 
-
-//---------------------------------------------------------
-
-
-
-
-
-//---------------------------------------------------------
 function Carrito({ carrito }) {
 
 
@@ -27,6 +19,7 @@ function Carrito({ carrito }) {
 
     return (
         <>
+            <br />
             <br />
             <br />
             <br />

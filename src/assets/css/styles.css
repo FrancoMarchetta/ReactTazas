@@ -1,5 +1,18 @@
 /* .style {
 } */
+
+/* carrusel */
+
+.carousel-control-next:hover{
+  background-color: transparent;
+}
+.carousel-control-prev:hover{
+  background-color: transparent;
+}
+
+
+
+
 .nav-link {
     color: #000000;
   }
