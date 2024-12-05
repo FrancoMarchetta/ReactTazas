@@ -192,3 +192,32 @@ button {
 button:hover {
   background-color: #d63333;
 }
+
+.float{
+  visibility: visible;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  bottom: 40px;
+  right: 40px;
+  color: #f5f5f5;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+}
+
+.fa-whatsapp{
+  font-size: 60px;
+
+}
+
+.float:hover{
+  background-color: #28e76e;
+
+}
+
+.footer .fa-whatsapp {
+  font-size: 20px;  /* Ajusta el tamaño del ícono en el footer */
+}

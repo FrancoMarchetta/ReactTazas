@@ -49,7 +49,20 @@ function App() {
 
         </Routes >
 
-        <Footer></Footer>
+    
+        <Footer />
+
+{/* Botón flotante de WhatsApp */}
+<a
+          href="https://wa.me/2615007853?text=¡Hola, quiero saber más sobre tus productos!"
+          className="float"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa-brands fa-whatsapp"></i>
+        </a>
+
+
       </Router >
 
 
