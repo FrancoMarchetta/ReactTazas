@@ -193,7 +193,7 @@ botonVaciarCarrito:hover {
   background-color: #d63333;
 }
 
-<<<<<<< HEAD
+
 .float{
   visibility: visible;
   position: fixed;
@@ -222,7 +222,7 @@ botonVaciarCarrito:hover {
 .footer .fa-whatsapp {
   font-size: 20px;  /* Ajusta el tamaño del ícono en el footer */
 }
-=======
+
 .formulario{
   display: flex;
   flex-direction: column;
@@ -247,4 +247,4 @@ botonVaciarCarrito:hover {
 .loginInputs:focus{
   width: 70%;
 }
->>>>>>> upstream/main
+
