@@ -42,8 +42,8 @@ function App() {
 
         <Routes>
 
-          <Route path="/" element={<Login></Login>}></Route>
-          <Route path="/home" element={<Home></Home>}></Route>
+          {/* <Route path="/" element={<Login></Login>}></Route> */}
+          <Route path="/" element={<Home></Home>}></Route>
           <Route path="/Nosotros" element={<Nosotros></Nosotros>}></Route>
           <Route path="/Tazas" element={<CatalogoTazas agregarAlCarrito={agregarAlCarrito}></CatalogoTazas>}></Route>
           <Route path="/Tazones" element={<CatalogoTazones agregarAlCarrito={agregarAlCarrito}></CatalogoTazones>}></Route>
@@ -53,11 +53,11 @@ function App() {
 
         </Routes >
 
-    
+
         <Footer />
 
-{/* Botón flotante de WhatsApp */}
-<a
+        {/* Botón flotante de WhatsApp */}
+        <a
           href="https://wa.me/2615007853?text=¡Hola, quiero saber más sobre tus productos!"
           className="float"
           target="_blank"

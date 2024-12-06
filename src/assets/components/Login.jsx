@@ -8,7 +8,7 @@ const Login = () => {
         newpath("/home");
     };
 
-    const aprovedUser = "1234";
+    const aprovedUser = "Franco";
     const aprovedPassword = "1234";
 
     const [isLogged, setIsLogged] = useState(false);
