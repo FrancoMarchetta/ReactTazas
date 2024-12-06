@@ -53,7 +53,11 @@ function Footer() {
                             {/* Whatsapp */}
                             <li className="nav-item">
                                 <a className="nav-link" aria-current="page" href="https://wa.me/2615007853?text=¡Hola, quiero saber más sobre tus productos!">
+<<<<<<< HEAD
                                     <i className="fa-brands fa-whatsapp"></i> 2615007853
+=======
+                                    <i className="fa-brands fa-whatsapp"></i> 2616631821
+>>>>>>> upstream/main
                                 </a>
                             </li>
                             {/* Teléfono */}

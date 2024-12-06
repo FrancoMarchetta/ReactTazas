@@ -10,6 +10,8 @@ import Card from './assets/components/Card';
 import CatalogoTazas from './pages/CatalogoTazas';
 import CatalogoTazones from './pages/CatalogoTazones';
 import Carrito from './pages/Carrito';
+import Login from './assets/components/Login';
+
 
 
 
@@ -39,7 +41,9 @@ function App() {
         <Header></Header>
 
         <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
+
+          <Route path="/" element={<Login></Login>}></Route>
+          <Route path="/home" element={<Home></Home>}></Route>
           <Route path="/Nosotros" element={<Nosotros></Nosotros>}></Route>
           <Route path="/Tazas" element={<CatalogoTazas agregarAlCarrito={agregarAlCarrito}></CatalogoTazas>}></Route>
           <Route path="/Tazones" element={<CatalogoTazones agregarAlCarrito={agregarAlCarrito}></CatalogoTazones>}></Route>

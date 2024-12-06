@@ -9,7 +9,7 @@ function Header() {
     }
 
     const goToHome = () => {
-        newpath("/");
+        newpath("/home");
     }
 
     const goToTazas = () => {                        // <-- todas las funciones para las rutas

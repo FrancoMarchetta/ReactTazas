@@ -128,7 +128,7 @@ html, body, #root {
   border-width: 2px;
   border-radius: 20px;
   width: 80%;
-  margin-left: 10%;     /*<-- no se exactamente que hice pero algo de lo que esta aca hace que no se rompa mas el carrito asi que porfavor no tocar*/
+  margin-left: 10rem;     /*<-- no reme exactamente que hice pero algo de lo que esta aca hace que no se rompa mas el carrito asi que porfavor no tocar*/
   /* min-height: 100%; */
 
 }
@@ -184,15 +184,16 @@ html, body, #root {
   margin-bottom: 0.95rem; 
 }
 
-button {
+botonVaciarCarrito {
   border-radius: 0.25rem;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+botonVaciarCarrito:hover {
   background-color: #d63333;
 }
 
+<<<<<<< HEAD
 .float{
   visibility: visible;
   position: fixed;
@@ -221,3 +222,29 @@ button:hover {
 .footer .fa-whatsapp {
   font-size: 20px;  /* Ajusta el tamaño del ícono en el footer */
 }
+=======
+.formulario{
+  display: flex;
+  flex-direction: column;
+  border: solid black;
+  height: 100%;
+  width: 30%;
+  align-items: center;
+  margin:0% 0 0 35%;
+  gap: 1cm;
+  border-radius: 10px;
+  background-color: #d3d3d3;
+  box-shadow: .2cm .1cm;
+  
+}
+
+.loginInputs{
+  width: 50%;
+  transition: .8s;
+
+}
+
+.loginInputs:focus{
+  width: 70%;
+}
+>>>>>>> upstream/main
