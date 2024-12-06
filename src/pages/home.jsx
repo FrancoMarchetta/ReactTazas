@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-function Home() {
+import { useAuth0 } from '@auth0/auth0-react'; 
 
+function Home() {
+    const { loginWithRedirect,logout, isAuthenticated, user } = useAuth0(); // Hook de Auth0
     return (
         <main className="container bodyclassname">
             <br />
@@ -87,6 +89,32 @@ function Home() {
                      nuestras tazas están hechas para acompañarte en cada momento especial. 
                      Descubre más sobre nuestra colección y encuentra tu nueva taza favorita en Cup Head.
                     </p>
+ {/* Botón de Login */}
+ {!isAuthenticated ? (
+                        <div className="text-center">
+                            <button
+                                className="btn btn-primary btn-lg"
+                                onClick={loginWithRedirect}
+                            >
+                                Iniciar Sesión
+                            </button>
+                        </div>
+                    ) : (
+                        <div className="text-center">
+                            <h5>¡Bienvenido, {user.name}!</h5>
+                            <button
+                                className="btn btn-danger btn-lg"
+                                onClick={() => logout({ logoutParams: {returnTo: "http://localhost:5173" }})
+                            
+                            }
+                            >
+                                Cerrar Sesión
+                            </button>
+
+                        </div>
+                    )}
+
+
                 </div>
             </div>
 
