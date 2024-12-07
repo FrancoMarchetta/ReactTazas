@@ -248,3 +248,22 @@ botonVaciarCarrito:hover {
   width: 70%;
 }
 
+.botonAgregar-Restar{
+  height: 40% ;
+  border-radius: 5px;
+}
+
+#manejoCantidad{
+  gap: .5cm;
+  margin-left: 5%;
+}
+
+#botonAgregarCantidad:hover{
+  background-color: #28e76e;
+  transition: .5s;
+}
+
+#botonRestarCantidad:hover{
+  background-color: #e72828;
+  transition: .5s;
+}

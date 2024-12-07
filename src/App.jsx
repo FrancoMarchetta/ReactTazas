@@ -18,9 +18,9 @@ import Login from './assets/components/Login';
 function App() {
   const [carrito, setCarrito] = useState([]);
 
-  const agregarAlCarrito = (productId, name, image, price) => {
+  const agregarAlCarrito = (id, name, image, price) => {
     const carritoExistente = JSON.parse(localStorage.getItem('carrito')) || [];
-    const nuevoCarrito = [...carritoExistente, { productId, name, image, price }];
+    const nuevoCarrito = [...carritoExistente, { id, name, image, price }];
     localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
     setCarrito(nuevoCarrito);
   };

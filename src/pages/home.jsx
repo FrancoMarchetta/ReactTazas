@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import { useAuth0 } from '@auth0/auth0-react'; 
+import { useAuth0 } from '@auth0/auth0-react';
 
 function Home() {
-    const { loginWithRedirect,logout, isAuthenticated, user } = useAuth0(); // Hook de Auth0
+    const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0(); // Hook de Auth0
     return (
         <main className="container bodyclassname">
             <br />
@@ -74,23 +74,24 @@ function Home() {
                     <h1 className="text-center">Las Mejores Tazas</h1>
 
                     <p className="text-center text-sm-start lead">
-                     Cup Head es una marca innovadora de tazas diseñada para quienes buscan estilo y
-                     funcionalidad en su día a día. Cada taza combina materiales de alta calidad con diseños únicos y divertidos,
-                     inspirados en personajes y formas modernas.
+                        Cup Head es una marca innovadora de tazas diseñada para quienes buscan estilo y
+                        funcionalidad en su día a día. Cada taza combina materiales de alta calidad con diseños únicos y divertidos,
+                        inspirados en personajes y formas modernas.
                     </p>
                     <p className="text-center text-sm-start lead">
-                    Desde diseños clásicos hasta ediciones limitadas,
-                     Cup Head ofrece opciones para todos los gustos. 
-                     Ya sea que disfrutes tu café por la mañana o un té relajante por la tarde,
-                     nuestras tazas están hechas para acompañarte en cada momento especial. 
-                     Descubre más sobre nuestra colección y encuentra tu nueva taza favorita en Cup Head.
-                     Desde diseños clásicos hasta ediciones limitadas, Cup Head ofrece opciones para todos los gustos.
-                     Ya sea que disfrutes tu café por la mañana o un té relajante por la tarde, 
-                     nuestras tazas están hechas para acompañarte en cada momento especial. 
-                     Descubre más sobre nuestra colección y encuentra tu nueva taza favorita en Cup Head.
+                        Desde diseños clásicos hasta ediciones limitadas,
+                        Cup Head ofrece opciones para todos los gustos.
+                        Ya sea que disfrutes tu café por la mañana o un té relajante por la tarde,
+                        nuestras tazas están hechas para acompañarte en cada momento especial.
+                        Descubre más sobre nuestra colección y encuentra tu nueva taza favorita en Cup Head.
+                        Desde diseños clásicos hasta ediciones limitadas, Cup Head ofrece opciones para todos los gustos.
+                        Ya sea que disfrutes tu café por la mañana o un té relajante por la tarde,
+                        nuestras tazas están hechas para acompañarte en cada momento especial.
+                        Descubre más sobre nuestra colección y encuentra tu nueva taza favorita en Cup Head.
                     </p>
- {/* Botón de Login */}
- {!isAuthenticated ? (
+
+                    {/* Botón de Login */}
+                    {!isAuthenticated ? (
                         <div className="text-center">
                             <button
                                 className="btn btn-primary btn-lg"
@@ -104,9 +105,9 @@ function Home() {
                             <h5>¡Bienvenido, {user.name}!</h5>
                             <button
                                 className="btn btn-danger btn-lg"
-                                onClick={() => logout({ logoutParams: {returnTo: "http://localhost:5173" }})
-                            
-                            }
+                                onClick={() => logout({ logoutParams: { returnTo: "http://localhost:5173" } })
+
+                                }
                             >
                                 Cerrar Sesión
                             </button>
