@@ -57,7 +57,7 @@ function Footer() {
 
                                     <i className="fa-brands fa-whatsapp"></i> 2615007853
 
-                                    <i className="fa-brands fa-whatsapp"></i> 2616631821
+                                  
 
                                 </a>
                             </li>
