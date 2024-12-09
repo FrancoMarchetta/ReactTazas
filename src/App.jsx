@@ -20,9 +20,20 @@ function App() {
 
   const agregarAlCarrito = (id, name, image, price) => {
     const carritoExistente = JSON.parse(localStorage.getItem('carrito')) || [];
-    const nuevoCarrito = [...carritoExistente, { id, name, image, price }];
-    localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
-    setCarrito(nuevoCarrito);
+
+ // Verifica si el producto ya existe en el carrito
+    const existeProducto = carritoExistente.some((producto) => producto.id === id);
+    
+    if (existeProducto) {
+      alert("Este producto ya está en el carrito."); // notificación visual
+      return;
+    } 
+     // Si no existe, lo agrega al carrito
+    
+      const nuevoCarrito = [...carritoExistente, { id, name, image, price }];
+      localStorage.setItem('carrito', JSON.stringify(nuevoCarrito));
+      setCarrito(nuevoCarrito);
+    
   };
 
   useEffect(() => {
@@ -47,7 +58,7 @@ function App() {
           <Route path="/Nosotros" element={<Nosotros></Nosotros>}></Route>
           <Route path="/Tazas" element={<CatalogoTazas agregarAlCarrito={agregarAlCarrito}></CatalogoTazas>}></Route>
           <Route path="/Tazones" element={<CatalogoTazones agregarAlCarrito={agregarAlCarrito}></CatalogoTazones>}></Route>
-          <Route path="/Carrito" element={<Carrito carrito={carrito}></Carrito>}></Route>
+          <Route path="/Carrito" element={<Carrito carrito={carrito}setCarrito={setCarrito}></Carrito>}></Route>
 
 
 
