@@ -36,7 +36,7 @@ function CatalogoTazas({ agregarAlCarrito }) {
                     placeholder="Buscar tazas..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="search-bar" 
+                    className="search-bar"
                 />
             </div>
 
